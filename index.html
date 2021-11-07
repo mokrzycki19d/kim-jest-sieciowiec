@@ -11,8 +11,45 @@
 	</head>
 	<body>
 		<main>
-			<h1>Kim jest sieciowiec?</h1>
-			<input id="start" type="button" value="Rozpocznij grę" />
+			<div id="wrapper">
+				<h1>Kim jest sieciowiec?</h1>
+				<input id="chk" type="checkbox">
+				<label for="chk">				
+					<div id="start">
+						Rozpocznij grę
+					</div>
+				</label>
+				<ul id="list">
+					<li>Zwykła gra</li>
+					<li>David Squad</li>
+					<li>Zasady</li>
+				</ul>
+
+			</div>
 		</main>
+
+
+
+
+		<script>
+
+			const button = document.querySelector("#chk");
+			const list = document.querySelector("#list");
+			const start = document.querySelector("#start");
+
+			start.addEventListener("click", ()=>{
+
+					if(button.checked)
+						{
+							list.style.display = "block";
+						}
+						else
+						{
+							list.style.display = "none";
+						}
+			})
+
+			
+		</script>
 	</body>
 </html>

@@ -1,3 +1,11 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
 body {
 	background-color: orange;
 }
@@ -5,6 +13,11 @@ body {
 main {
 	text-align: center;
 	font-family: "Roboto", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
 }
 
 h1 {
@@ -13,11 +26,40 @@ h1 {
 
 #start {
 	background-color: #00d42a;
-	width: clamp(100px, 20vw, 400px);
-	height: clamp(30px, 5vh, 160px);
+	width: clamp(140px, 20vw, 400px);
+	height: clamp(60px, 5vh, 160px);
 	border: none;
 	border-right: 2px solid #00ad22;
 	border-bottom: 2px solid #008a1b;
 	font-size: clamp(15px, 1vw, 45px);
 	color: #002b08;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+
+#start:hover{
+	background-color: #00cc29;
+}
+
+#wrapper
+{
+	display: block;
+}
+
+#wrapper *
+{
+	margin: 10px;
+}
+
+#chk
+{
+	display: none;
+}
+
+#list
+{
+	display: none;
+	position: absolute;
 }
