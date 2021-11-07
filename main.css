@@ -1,0 +1,23 @@
+body {
+	background-color: orange;
+}
+
+main {
+	text-align: center;
+	font-family: "Roboto", sans-serif;
+}
+
+h1 {
+	font-size: clamp(30px, 3vh, 80px);
+}
+
+#start {
+	background-color: #00d42a;
+	width: clamp(100px, 20vw, 400px);
+	height: clamp(30px, 5vh, 160px);
+	border: none;
+	border-right: 2px solid #00ad22;
+	border-bottom: 2px solid #008a1b;
+	font-size: clamp(15px, 1vw, 45px);
+	color: #002b08;
+}
