@@ -1,55 +1,54 @@
 <html lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="main.css" />
-		<title>Kim jest sieciowiec?</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-	</head>
-	<body>
-		<main>
-			<div id="wrapper">
-				<h1>Kim jest sieciowiec?</h1>
-				<input id="chk" type="checkbox">
-				<label for="chk">				
-					<div id="start">
-						Rozpocznij grę
-					</div>
-				</label>
-				<ul id="list">
-					<li>Zwykła gra</li>
-					<li>David Squad</li>
-					<li>Zasady</li>
-				</ul>
 
-			</div>
-		</main>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="main.css" />
+	<title>Kim jest sieciowiec?</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
 
+<body>
+	<main>
+		<div id="wrapper">
+			<h1>Kim jest sieciowiec?</h1>
+			<input id="chk" type="checkbox">
+			<label for="chk">
+				<div id="start">
+					Rozpocznij grę
+				</div>
+			</label>
+			<ul id="list">
+				<li><a href="#">Zwykła gra</a></li>
+				<li><a href="#">David Squad</a></li>
+				<li><a href="#">Zasady</a></li>
+			</ul>
 
 
+		</div>
+	</main>
 
-		<script>
 
-			const button = document.querySelector("#chk");
-			const list = document.querySelector("#list");
-			const start = document.querySelector("#start");
 
-			start.addEventListener("click", ()=>{
 
-					if(button.checked)
-						{
-							list.style.display = "block";
-						}
-						else
-						{
-							list.style.display = "none";
-						}
-			})
+	<script>
+		const button = document.querySelector("#chk");
+		const list = document.querySelector("#list");
+		const start = document.querySelector("#start");
 
-			
-		</script>
-	</body>
+		start.addEventListener("click", () => {
+
+
+			if (button.checked) {
+				list.style.display = "block";
+			} else {
+				list.style.display = "none";
+			}
+		})
+	</script>
+</body>
+
 </html>
