@@ -6,8 +6,23 @@
 
 
 body {
-	background-color: orange;
+	background-color: #ffb950;
+	background-image: url(img/question.jpg);
+	background-blend-mode: screen;
 	font-family: "Roboto", sans-serif;
+}
+
+body::before
+{
+	left: 0;
+	top: 0;
+	content: "";
+	width: 100vw;
+	height: 100vh;
+	background-image: radial-gradient(#ffb950, #ffab2d);
+	opacity: 85%;
+	position: absolute;
+	z-index: -1;
 }
 
 a {
@@ -19,8 +34,6 @@ a {
 	width: 100%;
 	height: 100%;
 }
-
-main {}
 
 header {
 	text-align: center;
@@ -54,6 +67,7 @@ header {
 	align-items: center;
 	font-size: 1.3em;
 	position: absolute;
+	cursor: pointer;
 }
 
 
@@ -81,6 +95,7 @@ header {
 
 	.click {
 		position: relative;
+		
 	}
 
 	#buttons {

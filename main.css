@@ -6,8 +6,23 @@
 
 
 body {
-	background-color: orange;
-	font-family: "Roboto", sans-serif;
+	background-color: #ffb950;
+	background-image: url(img/question.jpg);
+	background-blend-mode: screen;
+	font-family: "Road Rage", sans-serif;
+}
+
+body::before
+{
+	left: 0;
+	top: 0;
+	content: "";
+	width: 100vw;
+	height: 100vh;
+	background-image: radial-gradient(#ffb950, #ffab2d);
+	opacity: 85%;
+	position: absolute;
+	z-index: -1;
 }
 
 main {
@@ -20,7 +35,9 @@ main {
 }
 
 h1 {
-	font-size: clamp(30px, 3vh, 80px);
+	font-size: 52px;
+	color: white;
+	text-shadow: 5px 5px black;
 }
 
 
@@ -40,13 +57,14 @@ a:hover {
 	border: none;
 	border-right: 2px solid #00ad22;
 	border-bottom: 2px solid #008a1b;
-	font-size: clamp(20px, 1vw, 45px);
+	font-size: 40px;
 	color: #002b08;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	user-select: none;
 	margin-top: 15px;
+	cursor: pointer;
 }
 
 #start:hover {
@@ -86,47 +104,4 @@ a:hover {
 
 #list li {
 	position: relative;
-}
-
-
-#questions {
-	display: flex;
-}
-
-#questions input {
-	height: clamp(40px, 3vh, 100px);
-	width: clamp(200px, 30vw, 300px);
-	background-color: #ededed;
-	font-size: 1.4em;
-	text-align: center;
-	display: block;
-}
-
-label {
-	font-size: 1.3em;
-
-}
-
-
-#cogs {
-	position: absolute;
-	top: 2vh;
-	text-align: center;
-}
-
-#start_game {
-	background-color: #00d42a;
-	width: clamp(270px, 20vw, 400px);
-	height: clamp(60px, 5vh, 160px);
-	border: none;
-	border-right: 2px solid #00ad22;
-	border-bottom: 2px solid #008a1b;
-	font-size: clamp(20px, 1vw, 45px);
-	color: #002b08;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	user-select: none;
-	position: absolute;
-	top: 85vh;
 }

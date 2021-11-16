@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<link rel="stylesheet" href="game.css" />
+	<link rel="stylesheet" href="difficulty.css" />
 	<title>Kim jest sieciowiec?</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,18 +14,23 @@
 
 <body>
 	<header>
-		<h1>Zadaj pytanie 1:</h1>
+		<h1>Wybierz poziom trudności</h1>
 	</header>
 
 	<main>
-		<div id="buttons">
-			<div id="exit" class="click">
-				<a href="index.html">Wyjdź</a>
+		<div>
+			<div class="diff" id="easy">
+				<a href="game.html">Łatwy</a>
 			</div>
 
-			<div id="ask" class="click">Zadaj pytanie</div>
 
-			<div id="mode" class="click">Zgadnij</div>
+			<div class="diff" id="medium">
+				<a href="game.html">Średni</a>
+			</div>
+	
+			<div class="diff" id="hard">
+				<a href="game.html">Trudny</a>
+			</div>
 		</div>
 	</main>
 
