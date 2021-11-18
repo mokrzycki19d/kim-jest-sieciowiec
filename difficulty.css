@@ -9,7 +9,7 @@ body {
 	background-color: #ffb950;
 	background-image: url(img/question.jpg);
 	background-blend-mode: screen;
-	font-family: "Roboto", sans-serif;
+	font-family: "Road Rage", sans-serif;
 }
 
 body::before
@@ -61,25 +61,35 @@ main
 	align-items: center;
 	font-size: 30px;
 	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgb(0, 0, 0, 0.15) inset;
 }
 
-.diff:hover
+.diff a
 {
-	color: #fff;
+	transition: 0.5s;
+}
+
+.diff a:hover
+{
+	transform: scale(1.2);
 }
 
 #easy
 {
 	background-color: rgb(151, 255, 130);
+	border: 3px solid rgb(131, 180, 100);
 }
 
 #medium
 {
 	background-color: rgb(255, 215, 36);
+	border: 3px solid rgb(255, 155, 6);
 }
 
 #hard
 {
 	background-color: rgb(255, 36, 36);
+	border: 3px solid rgb(180, 6, 6);
 }
 
