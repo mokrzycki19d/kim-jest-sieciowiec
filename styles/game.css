@@ -110,9 +110,10 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-size: 1.2em;
 }
 
-#chk
+#chk, #chk2
 {
 	display: none;
 }
@@ -128,7 +129,6 @@ header {
 	position: absolute;
 	cursor: pointer;
 	user-select: none;
-	
 }
 
 .click :first-child
@@ -169,6 +169,11 @@ header {
 .character img:hover
 {
 	transform: scale(1.1);
+}
+
+.selected
+{
+	opacity: 0.3;
 }
 
 /* #characters div:nth-child(5n)
