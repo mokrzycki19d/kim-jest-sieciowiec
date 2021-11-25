@@ -81,25 +81,26 @@ a:hover {
 }
 
 #list li:first-child {
-	transform: translateX(25px) skew(-30deg);
+	transform: translateX(40px) skew(-30deg);
 }
 
 #list li:nth-child(2) {
-	transform: translateX(25px) skew(-30deg);
+	transform: translateX(40px) skew(-30deg);
 }
 
 #list li:last-child {
-	transform: translateX(25px) skew(-30deg);
+	transform: translateX(40px) skew(-30deg);
 }
 
 #list {
-	font-size: 25px;
+	font-size: 2.5em;
 	transition: 0.8s linear;
 	display: none;
 	text-align: left;
 	position: absolute;
 	border-left: 2px solid black;
-	transform: skew(30deg) translateX(30px);
+	transform: skew(30deg) translateX(40px);
+	list-style-type: none;
 }
 
 #list li {

@@ -128,6 +128,7 @@ header {
 	position: absolute;
 	cursor: pointer;
 	user-select: none;
+	
 }
 
 .click :first-child
@@ -146,6 +147,7 @@ header {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 1em;
+	
 }
 
 
@@ -154,6 +156,19 @@ header {
 	border-radius: 5px;
 	border: 7px solid;
 	border-color: rgb(255, 155, 6);
+	overflow: hidden;
+	
+}
+
+.character img
+{
+	transition: 0.5s;
+}
+
+
+.character img:hover
+{
+	transform: scale(1.1);
 }
 
 /* #characters div:nth-child(5n)
@@ -191,7 +206,7 @@ header {
 {
 	width: 12vw;
 	height: 20vh;
-	background-color: rgb(160, 160, 160);
+	background-color: rgb(255, 192, 98);
 }
 
 
