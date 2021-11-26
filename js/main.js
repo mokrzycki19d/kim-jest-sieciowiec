@@ -8,6 +8,7 @@ const button_mode = document.querySelector("#chk2");
 const mode_text = document.querySelector("#mode_id");
 const h = document.querySelector("h1");
 const characters = document.querySelectorAll(".character");
+const questions = document.querySelectorAll(".question");
 
 let guessMode = false;
 let qNum = 1;
@@ -67,3 +68,43 @@ characters.forEach(item => item.addEventListener("click", ()=>{
             item.classList.toggle("selected");
         }
 }))
+
+let qFunctions = [
+    () => Networker.sex == "m",
+    () => Networker.hair_colour == "light",
+    () => Networker.hair_colour == "red",
+    () => Networker.hair_colour == "dark",
+    () => Networker.eyes == "green",
+    () => Networker.hair_length == "long",
+    () => Networker.skin == "dark",
+    () => Networker.hat,
+    () => Networker.glasses,
+    () => Networker.facial_hair
+]
+
+let mask = 0;
+function set(idx)
+{
+    mask = mask|(1<<idx)
+}
+
+function get(idx)
+{
+    return (mask&(1<<idx)) === 0
+}
+
+for(let i = 0; i < questions.length; i++)
+{
+    questions[i].addEventListener("click", ()=>{
+        if(!guessMode && qNum <= qMax && get(i))
+        {
+            set(i);
+            qNum++;
+            if(qNum <= qMax)
+                h.innerText = "Zadaj pytanie " + qNum + ":";
+            else
+                h.innerText = "Skończyły ci się pytania";
+            questions[i].classList.add(qFunctions[i]() ? "positive" : "negative");
+        }
+    })
+}
