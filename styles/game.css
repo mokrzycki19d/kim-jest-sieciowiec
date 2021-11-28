@@ -211,7 +211,7 @@ header {
 
 	#buttons {
 
-		position: absolute; 
+		position: fixed; 
 		bottom: 2vh;
 		display: flex;
 		justify-content: space-evenly;
