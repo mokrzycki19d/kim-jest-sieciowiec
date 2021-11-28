@@ -6,23 +6,9 @@
 
 
 body {
-	background-color: #ffb950;
-	background-image: url(../img/question.jpg);
-	background-blend-mode: screen;
+	background-image: radial-gradient(#ffc46b, #ffb648), url(../img/question.png);
+	background-blend-mode:multiply;
 	font-family: "Road Rage", sans-serif;
-}
-
-body::before
-{
-	left: 0;
-	top: 0;
-	content: "";
-	width: 100vw;
-	height: 100vh;
-	background-image: radial-gradient(#ffb950, #ffab2d);
-	opacity: 85%;
-	position: absolute;
-	z-index: -1;
 }
 
 h1{
