@@ -11,6 +11,7 @@ const characters = document.querySelectorAll(".character");
 const questions = document.querySelectorAll(".question");
 
 let guessMode = false;
+let gameEnd = false;
 let qNum = 1;
 
 class Character
@@ -30,44 +31,76 @@ class Character
 }
 
 ask.addEventListener("click", () => {
-    if (button.checked) 
+    if (button.checked && !gameEnd) 
     {
         list.style.display = "none";
         chars.style.display = "grid";
 
-    } else 
-        {
-            list.style.display = "block";
-            if(window.innerWidth <= 1000)
-            {   
-                chars.style.display = "none";
+    } else if(!gameEnd)
+            {
+                list.style.display = "block";
+                if(window.innerWidth <= 1000)
+                {   
+                    chars.style.display = "none";
+                }
             }
-        }
 
 })
 
 mode.addEventListener("click", () => {
-    if (button_mode.checked) 
+    if(!gameEnd)
     {
-        mode_text.innerText = "Zgadnij";
-        h.innerText = "Zadaj pytanie " + qNum + ":";
-        guessMode = false;
-    } else 
-        { 
-            mode_text.innerText = "Odznacz";
-            h.innerText = "Wybierz osobę, która może być sieciowcem..."
-            guessMode = true;
-        }
-
+        if (button_mode.checked) 
+        {
+            mode_text.innerText = "Zgadnij";
+            h.innerText = "Zadaj pytanie " + qNum + ":";
+            guessMode = false;
+        } else 
+            { 
+                mode_text.innerText = "Odznacz";
+                h.innerText = "Wybierz osobę, która może być sieciowcem..."
+                guessMode = true;
+            }
+    }
 })
 
 
-characters.forEach(item => item.addEventListener("click", ()=>{
-        if(!guessMode)
+for(let i = 0; i < characters.length; i++)
+{
+    characters[i].addEventListener("click", ()=>{
+        if(!guessMode && !gameEnd)
         {
-            item.classList.toggle("selected");
+            characters[i].classList.toggle("selected");
         }
-}))
+        else if(characters[i].className !== "character selected" && !gameEnd)
+        {
+            if(Networker.id == i+1)
+            {
+                h.innerText = "Udało ci się zgadnąć!";
+            }
+            else
+            {
+                 h.innerText = "Nie prawda, tak naprawdę sieciowcem jest...";
+            }
+
+            gameEnd = true;
+            list.style.display = "none";
+            ask.style.opacity = "0.1";
+            mode.style.opacity = "0.1";
+            for(let i = 0; i < characters.length; i++)
+            {
+                characters[i].classList.remove("selected")
+            }
+
+            for(let i = 0; i < characters.length; i++)
+            {
+                if(i+1 != Networker.id)
+                characters[i].classList.add("notnetworker")
+            }
+        }
+    })
+}
+
 
 let qFunctions = [
     () => Networker.sex == "m",
@@ -96,7 +129,7 @@ function get(idx)
 for(let i = 0; i < questions.length; i++)
 {
     questions[i].addEventListener("click", ()=>{
-        if(!guessMode && qNum <= qMax && get(i))
+        if(!guessMode && qNum <= qMax && get(i) && !gameEnd)
         {
             set(i);
             qNum++;

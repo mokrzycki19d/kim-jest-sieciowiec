@@ -6,7 +6,7 @@ charArr[3] = new Character(4, "m", "dark", "long", "light", "green", false, fals
 charArr[4] = new Character(5, "f", "light", "long", "light", "dark", false, false, false)
 charArr[5] = new Character(6, "f", "red", "long", "light", "green", true, false, true)
 charArr[6] = new Character(7, "m", "red", "short", "light", "yellow", true, false, false)
-charArr[7] = new Character(8, "m", "red", "short", "light", "green", true, false, true)
+charArr[7] = new Character(8, "m", "red", "short", "dark", "green", true, false, true)
 charArr[8] = new Character(9, "f", "light", "short", "light", "blue", true, false, false)
 charArr[9] = new Character(10, "f", "dark", "short", "dark", "dark", false, false, false)
 charArr[10] = new Character(11, "f", "red", "short", "dark", "blue", true, true, false)
@@ -21,5 +21,3 @@ for(let i = 0; i < charArr.length; i++)
         Networker = charArr[i];
     }
 }
-
-console.log(Networker);
