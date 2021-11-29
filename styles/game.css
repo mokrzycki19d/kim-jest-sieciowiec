@@ -212,15 +212,24 @@ header {
 
 	.click {
 		position: initial;
+		margin: 0;
 	}
 
-	#buttons {
 
+	#buttons {
 		position: fixed; 
 		bottom: 2vh;
+		display: grid;
+		grid-template-columns: repeat(3, 33%);
+		width: 100%;
+		font-size: 15px;
+	}
+
+	#buttons > label
+	{
 		display: flex;
-		justify-content: space-evenly;
-		width: 100vw;
+		justify-content: center;
+		align-items: center;
 	}
 	
 

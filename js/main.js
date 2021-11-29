@@ -2,6 +2,7 @@ const qMax = localStorage.getItem('question');
 const button = document.querySelector("#chk");
 const list = document.querySelector("#qlist");
 const ask = document.querySelector("#ask");
+const exit = document.querySelector("#exit");
 const chars = document.querySelector("#characters");
 const mode = document.querySelector("#mode");
 const button_mode = document.querySelector("#chk2");
@@ -29,6 +30,10 @@ class Character
         this.facial_hair = facial_hair;
     }
 }
+
+exit.addEventListener("click", () => {
+    window.location.replace("index.html");
+})
 
 ask.addEventListener("click", () => {
     if (button.checked && !gameEnd) 
