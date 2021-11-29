@@ -205,6 +205,11 @@ header {
 
 
 @media screen and (max-width: 1000px) {
+	main
+	{
+		margin-bottom: 100px;
+	}
+
 	.click {
 		position: initial;
 	}

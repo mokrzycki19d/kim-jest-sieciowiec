@@ -11,9 +11,18 @@ body {
 	font-family: "Road Rage", sans-serif;
 }
 
+header
+{
+	text-align: center;
+}
+
+header p
+{
+	font-size: 2em;
+}
+
 h1{
 	margin-top: 15px;
-	text-align: center;
 	font-size: 3em;
 }
 
@@ -42,7 +51,7 @@ main
 	width: 250px;
 	height: 60px;
 	display: block;
-	margin-bottom: 2em;
+	margin-bottom: 1.5em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -80,3 +89,8 @@ main
 	border: 3px solid rgb(180, 6, 6);
 }
 
+#cursed
+{
+	background-color: rgb(159, 0, 165);
+	border: 3px solid rgb(94, 0, 62);
+}
