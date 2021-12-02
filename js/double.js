@@ -12,7 +12,9 @@ charArr[9] = new Character(10, "f", "dark", "short", "dark", "dark", false, fals
 charArr[10] = new Character(11, "f", "red", "short", "dark", "blue", false, true, false)
 charArr[11] = new Character(12, "m", "light", "long", "dark", "yellow", false, false, false)
 
-const randCharIdx = Math.floor(Math.random() * 12) + 1;
+charArr[12] = new Character(13, "m", "dark", "long", "light", "green", true, false, false)
+
+const randCharIdx = Math.floor(Math.random() * 24) + 1;
 let Networker = charArr[0];
 for(let i = 0; i < charArr.length; i++)
 {

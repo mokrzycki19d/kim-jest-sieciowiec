@@ -59,7 +59,7 @@ header {
 
 #qlist
 {
-	position: absolute;
+	position: fixed;
 	display: none;
 	bottom: 20vh;
 	right: 4vw;
@@ -69,18 +69,18 @@ header {
 
 }
 
-::-webkit-scrollbar 
+#buttons ::-webkit-scrollbar 
 {
 	width: 15px;
 }
 
-::-webkit-scrollbar-track 
+#buttons ::-webkit-scrollbar-track 
 {
 	border-radius: 8px;
 	box-shadow: inset 0 0 5px gray;
 }
   
-::-webkit-scrollbar-thumb 
+#buttons ::-webkit-scrollbar-thumb 
 {
 	background-color: rgb(0, 182, 206);
 	border-radius: 10px;
@@ -133,7 +133,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	font-size: 2em;
-	position: absolute;
+	position: fixed;
 	cursor: pointer;
 	user-select: none;
 }
@@ -208,6 +208,7 @@ header {
 	main
 	{
 		margin-bottom: 100px;
+
 	}
 
 	.click {
@@ -247,8 +248,9 @@ header {
 
 	.question
 	{
-		width: 300px;
+		width: 250px;
 		height: 50px;
+		font-size: 2em;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -258,11 +260,12 @@ header {
 	#qlist
 	{
 		height: 80vh;
-		bottom: 10vh;
-		right: 12vw;
+		bottom: 11vh;
+		right: 10vw;
+		z-index: -1;
 	}
 
 	header {
-		font-size: 1.2em;
+		font-size: 1.1em;
 	}
 }
