@@ -34,7 +34,7 @@ class Character
 exit.addEventListener("click", () => {
     if(gameEnd)
     {
-        window.location.replace("game.html");
+        window.location.replace("double.html");
     }
     else
     {
@@ -120,6 +120,7 @@ let qFunctions = [
     () => Networker.hair_colour == "light",
     () => Networker.hair_colour == "red",
     () => Networker.hair_colour == "dark",
+    () => Networker.hair_colour == "other",
     () => Networker.eyes == "green",
     () => Networker.eyes == "blue",
     () => Networker.hair_length == "long",

@@ -37,24 +37,27 @@ a:hover {
 }
 
 #start {
-	background-color: #00d42a;
+	background-color: rgb(151, 255, 130);
 	width: clamp(270px, 20vw, 400px);
 	height: clamp(60px, 5vh, 160px);
 	border: none;
-	border-right: 2px solid #00ad22;
-	border-bottom: 2px solid #008a1b;
+	border: 3px solid rgb(131, 180, 100);
+	border-radius: 5px;
 	font-size: 40px;
-	color: #002b08;
+	color: #002b08;	
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	user-select: none;
 	margin-top: 15px;
 	cursor: pointer;
+	transition: 0.5s;
 }
 
+
 #start:hover {
-	background-color: #00cc29;
+	background-color: rgb(36, 218, 0);
+	color: white;
 }
 
 #wrapper {
